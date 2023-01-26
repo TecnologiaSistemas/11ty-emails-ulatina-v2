@@ -1,0 +1,15 @@
+{% macro addContent(options) %}
+  {%- if options.items -%}
+  {%- for i in options.items -%}
+  {% include "components/setContent.njk" %}
+  {%- endfor -%}
+  {%- else -%}
+  {% set i = {
+  type: options.type,
+  file: options.file,
+  options: options.options,
+  content: options.content
+  } %}
+  {% include "components/setContent.njk" %}
+  {%- endif -%}
+{% endmacro %}

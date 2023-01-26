@@ -1,0 +1,7 @@
+{% extends "components/header.njk" %}
+
+{% block column %}
+{% call function.setContent("header-text") %}
+{{ blockHeader.text }}
+{% endcall %}
+{% endblock %}

@@ -1,0 +1,63 @@
+{% set blockContent = {
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: { width: 30 },
+  spacer: { size: 40 }
+} %}
+
+{% extends "components/basic_content.njk" %}
+
+{% block topRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column({
+  colspan: 3
+}) %}
+{{ module.spacer(10) }}
+
+**Block topRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}
+
+{% block beforeColumn %}
+{% call function.column(true) %}
+
+**Block beforeColumn** {.text .white .d-center}
+
+{% endcall %}
+{% endblock %}
+
+{% block column %}
+**Block column** {.text .white .d-center}
+{% endblock %}
+
+{% block afterColumn %}
+{% call function.column(true) %}
+
+**Block afterColumn** {.text .white .d-center}
+
+{% endcall %}
+{% endblock %}
+
+
+{% block bottomRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column({
+  colspan: 3
+}) %}
+{{ module.spacer(10) }}
+
+**Block bottomRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}

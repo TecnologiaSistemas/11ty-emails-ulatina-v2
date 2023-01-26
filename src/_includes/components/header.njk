@@ -1,0 +1,17 @@
+{% set blockContent = blockHeader %}
+
+{% extends "components/basic_content.njk" %}
+
+{% block column %}
+{% if blockHeader.image.url %}
+{{ module.image({
+  table: {
+    align: blockHeader.image.table.align,
+    bgcolor: blockHeader.image.table.bgcolor,
+    class: blockHeader.image.table.class,
+    width: "auto"
+  },
+  image: blockHeader.image
+}) }}
+{% endif %}
+{% endblock %}

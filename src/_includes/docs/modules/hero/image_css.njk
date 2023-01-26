@@ -1,0 +1,13 @@
+{% set blockHero = {
+  table: {
+    class: "generic-hero hero-aol",
+    bgcolor: "red"
+  },
+  gutters: { width: 40 },
+  spacer: { top: { size: 60 }, bottom: { size: 380 } },
+  text: "**Variable text** {.h3 .white .d-center}
+  
+[Call 2 Action css style](#){.button-big} {.d-center}"
+} %}
+
+{% include "modules/hero.njk" %}

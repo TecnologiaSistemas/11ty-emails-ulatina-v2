@@ -1,0 +1,28 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{% set addTable = blockContent.table if blockContent.table else true %}
+{% set columnType = { tag: "th", class: "column" } if blockContent.responsive else { tag: "td" } %}
+{% set gutterLeft = blockContent.gutters.left if blockContent.gutters.left else blockContent.gutters %}
+{% set gutterRight = blockContent.gutters.right if blockContent.gutters.right else blockContent.gutters %}
+{% set spacerTop = blockContent.spacer.top.size if blockContent.spacer.top.size else blockContent.spacer.size %}
+{% set spacerTopHideOnMobile = blockContent.spacer.top.hideOnMobile if blockContent.spacer.top.hideOnMobile else blockContent.spacer.hideOnMobile %}
+{% set spacerBottom = blockContent.spacer.bottom.size if blockContent.spacer.bottom.size else blockContent.spacer.size %}
+{% set spacerBottomHideOnMobile = blockContent.spacer.bottom.hideOnMobile if blockContent.spacer.bottom.hideOnMobile else blockContent.spacer.hideOnMobile %}
+{% call function.table(addTable) %}
+{% block topRow %}{% endblock %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% block beforeColumn %}{% endblock %}
+{% block contentColumn %}
+{% call function.column(columnType) %}
+{{ module.spacer(spacerTop, spacerTopHideOnMobile) }}
+{% block column %}{% endblock %}
+{{ module.spacer(spacerBottom, spacerBottompHideOnMobile) }}
+{% endcall %}
+{% endblock %}
+{% block afterColumn %}{% endblock %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% block bottomRow %}{% endblock %}
+{% endcall -%}

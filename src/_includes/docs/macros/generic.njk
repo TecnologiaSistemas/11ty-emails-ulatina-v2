@@ -1,0 +1,17 @@
+{% import "components/modules.njk" as module %}
+
+{% call module.generic({
+  class: "generic-text",
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: {width: 30 },
+  spacer: { size: 30 }
+}) %}
+{{ module.spacer(10) }}
+
+***Caller*** {.text .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}

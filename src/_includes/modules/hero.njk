@@ -1,0 +1,46 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{% set blockContent = blockHero %}
+
+{% extends "components/basic_content.njk" %}
+
+{% block column %}
+{% for e,d in blockHero %}
+{% if  e == "image" %}
+{{ module.image({ image: d }) }}
+{% if not loop.last %}
+{{ module.spacer(blockHero.spacer.inner.size, blockHero.spacer.inner.hideOnMobile) }}
+{% endif %}
+{% elif e == "text" %}
+{% call module.generic(blockHero.textTable) %}
+
+{{ d }}
+
+{% endcall %}
+{% if not loop.last %}
+{{ module.spacer(blockHero.spacer.inner.size, blockHero.spacer.inner.hideOnMobile) }}
+{% endif %}
+{% elif e == "cta" %}
+{% set blockCTA = {
+  table: {
+    align: d.table.align,
+    bgcolor: d.table.bgcolor,
+    class: d.table.class,
+    width: d.table.width | default("auto")
+  },
+  gutters: d.gutters,
+  spacer: d.spacer,
+  image: d.image,
+  responsive: d.responsive,
+  text: d.text,
+  link: d.link,
+  class: d.class
+} %}
+{% include "modules/cta.njk" %}
+{% if not loop.last %}
+{{ module.spacer(blockHero.spacer.inner.size, blockHero.spacer.inner.hideOnMobile) }}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endblock %}

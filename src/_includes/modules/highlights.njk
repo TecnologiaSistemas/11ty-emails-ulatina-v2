@@ -1,0 +1,8 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{% call module.generic(blockHighlights) %}
+
+{{ blockHighlights.text }}
+
+{% endcall %}

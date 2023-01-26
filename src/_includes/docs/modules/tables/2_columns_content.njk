@@ -1,0 +1,97 @@
+{% set blockTable = {
+  class: "generic-header",
+  bgcolor: "red",
+  rowsClass: "generic-row",
+  rows: [
+    [
+      { gutter: { width: 30 } },
+      { image: {
+          content: {
+            url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+            width: 20,
+            height: 20
+          },
+          config: {
+            width: 20,
+            spacer: { size: 10 }
+          }
+        }
+      },
+      { gutter: { width: 20 } },
+      { text: {
+          content: "**Texto en columna** {.text .white}"
+        }
+      },
+      { gutter: { width: 50 } },
+      { image: {
+          content: {
+            url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+            width: 20,
+            height: 20
+          },
+          config: {
+            width: 20,
+            spacer: { size: 10 }
+          }
+        }
+      },
+      { gutter: { width: 20 } },
+      { text: {
+          content: "**Texto en columna** {.text .white}"
+        }
+      },
+      { gutter: { width: 30 } }
+    ],
+    [
+      { column: {
+          config: {
+            colspan: 9,
+            height: 5,
+            bgcolor: "orange"
+          }
+        }
+      }
+    ],
+    [
+      { gutter: { width: 30 } },
+      { image: {
+          content: {
+            url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+            width: 20,
+            height: 20
+          },
+          config: {
+            width: 20,
+            spacer: { size: 10 }
+          }
+        }
+      },
+      { gutter: { width: 20 } },
+      { text: {
+          content: "**Texto en columna** {.text .white}"
+        }
+      },
+      { gutter: { width: 50 } },
+      { image: {
+          content: {
+            url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+            width: 20,
+            height: 20
+          },
+          config: {
+            width: 20,
+            spacer: { size: 10 }
+          }
+        }
+      },
+      { gutter: { width: 20 } },
+      { text: {
+          content: "**Texto en columna** {.text .white}"
+        }
+      },
+      { gutter: { width: 30 } }
+    ]
+  ]
+} %}
+
+{% include "modules/table.njk" %}

@@ -1,0 +1,65 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{% call function.table(blockTable) %}
+{% for r in blockTable.rows %}
+{% call function.row({ class: blockTable.rowsClass}) %}
+{% for c in r %}
+{% set c = c | list %}
+{% if c[0].key == "gutter" %}
+{{ function.gutter(c[0].value ) }}
+{% else %}
+{% set columnOptions = {
+  tag: "th" if blockTable.responsive else "td",
+  align: c[0].value.config.align,
+  bgcolor: c[0].value.config.bgcolor,
+  class: c[0].value.config.class,
+  colspan: c[0].value.config.colspan,
+  height: c[0].value.config.height,
+  rowspan: c[0].value.config.rowspan,
+  valign: c[0].value.config.valign,
+  width: c[0].value.config.width
+} %}
+{% set spacerTop = c[0].value.config.spacer.top.size if c[0].value.config.spacer.top.size else c[0].value.config.spacer.size %}
+{% set spacerTopHideOnMobile = c[0].value.config.spacer.top.hideOnMobile if c[0].value.config.spacer.top.hideOnMobile else c[0].value.config.spacer.hideOnMobile %}
+{% set spacerBottom = c[0].value.config.spacer.bottom.size if c[0].value.config.spacer.bottom.size else c[0].value.config.spacer.size %}
+{% set spacerBottomHideOnMobile = c[0].value.config.spacer.bottom.hideOnMobile if c[0].value.config.spacer.bottom.hideOnMobile else c[0].value.config.spacer.hideOnMobile %}
+{% call function.column(columnOptions) %}
+{{ module.spacer(spacerTop, spacerTopHideOnMobile) }}
+{% if c[0].key == "text" %}
+
+{{ c[0].value.content | safe }}
+
+{% elif c[0].key == "cta" %}
+{% set blockCTA = {
+  table: {
+    align: c[0].value.content.table.align,
+    bgcolor: c[0].value.content.table.bgcolor,
+    class: c[0].value.content.table.class,
+    width: c[0].value.content.table.width | default("auto")
+  },
+  gutters: c[0].value.content.gutters,
+  spacer: c[0].value.content.spacer,
+  image: c[0].value.content.image,
+  responsive: c[0].value.content.responsive,
+  text: c[0].value.content.text,
+  link: c[0].value.content.link,
+  class: c[0].value.content.class
+} %}
+{% include "modules/cta.njk" %}
+{% elif c[0].key == "image" %}
+{{ module.image({ image: c[0].value.content }) }}
+{% elif c[0].key == "column" %}
+{{ module.image({ image: {
+  url: "https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif",
+  width: c[0].value.config.width | default("100%"),
+  height: c[0].value.config.height 
+} }) }}
+{% endif %}
+{{ module.spacer(spacerBottom, spacerBottomHideOnMobile) }}
+{% endcall %}
+{% endif %}
+{% endfor %}
+{% endcall %}
+{% endfor %}  
+{% endcall %}

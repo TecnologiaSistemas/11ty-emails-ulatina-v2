@@ -1,0 +1,104 @@
+{% set blockContent = {
+  table: {
+    class: "generic-hero",
+    bgcolor: "red"
+  },
+  spacer: { bottom: { size: 20 } },
+  items: [
+    { image: {
+        url: "/images/vintage-radio.jpg",
+        width: "100%",
+        domain: main.imagesUrlProduction
+    } },
+    { spacer: 30 },
+    { title: {
+        outerTable: {
+          gutters: { width: 40 }
+        },
+        content:  "**Variable title** {.h3 .white}"
+    } },
+    { spacer: 20 },
+    { cta: {
+        outerTable: {
+          gutters: { width: 40 }
+        },
+        table: {
+          class: "border-rounded",
+          bgcolor: "black"
+        },
+        gutters: { width: 40 },
+        spacer: { size: 10 },
+        text: "Call 2 action{.white .h4}",
+        link: "#"
+    } },
+    { spacer: 40 },
+    { title: {
+        outerTable: {
+          gutters: { width: 40 }
+        },
+        content: "**Paragraph** *text* {.h5 .white}" 
+    } },
+    { spacer: 20 },
+    { text: {
+        outerTable: {
+          gutters: { width: 40 }
+        },
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta auctor nulla, hendrerit interdum odio pulvinar et. Donec at diam viverra, tincidunt ante in, luctus urna. Nulla dui justo, vehicula a semper ut, fermentum a dui. Cras a semper quam. Mauris sed ante nulla. Donec et pulvinar risus. Nulla pharetra diam erat, in commodo sapien pretium non. Donec et laoreet nisl. Nam facilisis ullamcorper enim, a condimentum tortor vulputate nec. Maecenas tincidunt non turpis non sagittis.{.text .white}" 
+      }
+    },
+    { spacer: 30},
+    { table: {
+      rows: [
+        [
+          { gutter: { width: 40 } },
+          { image: {
+              content: {
+                url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+                width: 40,
+                height: 40
+              },
+              config: {
+                width: 40,
+                spacer: { top: { size: 5 } }
+              }
+            }
+          },
+          { gutter: { width: 10 } },
+          { text: {
+              content: "**Texto en columna** {.text .white}"
+            }
+          },
+          { gutter: { width: 30 } },
+          { cta: {
+            config: {
+              align: "center",
+              spacer: { size: 10 }
+            },
+            content: {
+              table: {
+                class: "border-rounded",
+                bgcolor: "black",
+                width: "auto"
+              },
+              gutters: { width: 20, inner: { width: 10 } },
+              spacer: { size: 10 },
+              image: {
+                url: "https://online.anahuac.mx/File/Anahuac/image/icon_whatsapp-white.png",
+                width: 30,
+                height: 30,
+                position: "left",
+                spacer: { size: 20 }
+              },
+              text: "**Call 2 action**{.h4 .white}",
+              link: "#"
+            }
+          } },
+          { gutter: { width: 40 } }
+        ] 
+      ]
+    } },
+    { spacer: 10 }
+  ]
+} %}
+
+{% include "modules/general_content.njk" %}

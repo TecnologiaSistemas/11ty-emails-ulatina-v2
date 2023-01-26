@@ -1,0 +1,53 @@
+{% extends "components/footer.njk" %}
+
+{% set spacerInner = blockFooter.spacer.inner.size if blockFooter.spacer.inner.size else blockFooter.spacer.size %}
+{% set spacerHideInner = blockFooter.spacer.inner.hideOnMobile if blockFooter.spacer.inner.hideOnMobile else blockFooter.spacer.hideOnMobile %}
+{% set spacerLegal = blockFooter.spacer.legal.size if blockFooter.spacer.legal.size else blockFooter.spacer.size %}
+{% set spacerHideLegal = blockFooter.spacer.legal.hideOnMobile if blockFooter.spacer.legal.hideOnMobile else blockFooter.spacer.hideOnMobile %}
+
+{% block column %}
+{% if blockFooter.image %}
+{{ module.image({
+  class: blockFooter.image.class,
+  image: blockFooter.image
+}) }}
+{{ module.spacer(spacerInner, spacerHideInner) }}
+{% endif %}
+{% if blockFooter.text %}
+
+{{ blockFooter.text }}
+
+{{ module.spacer(spacerInner, spacerHideInner) }}
+{% endif %}
+{% if blockFooter.contactInfo %}
+{% if blockFooter.contactInfo[0] | typeOf == "array" %}
+{% for ci in blockFooter.contactInfo %}
+{{ contactInfo(ci, columnType) }}
+{% endfor %}
+{% else %}
+{{ contactInfo(blockFooter.contactInfo, columnType) }}
+{% endif %}
+{% endif %}
+{% endblock %}
+
+{% block bottomRow %}
+{% if blockFooter.legal.text %}
+<tr>
+{% call function.column({
+  class: blockFooter.legal.class,
+  colspan: 3
+}) %}
+{% call module.generic({
+  table: true,
+  gutters: blockFooter.gutters
+}) %}
+{{ module.spacer(spacerInner, spacerHideInner) }}
+
+{{ blockFooter.legal.text }}
+
+{{ module.spacer(spacerInner, spacerHideInner) }}
+{% endcall %}
+{% endcall %}
+</tr>
+{% endif %}
+{% endblock %}

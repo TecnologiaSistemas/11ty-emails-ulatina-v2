@@ -1,0 +1,75 @@
+{% extends "components/header.njk" %}
+
+{% set spacerResponsive = true if blockHeader.responsive else false %}
+{% set mobileSpacer = "<div class='"+ blockHeader.mobileSpacer +"'></div>" if blockHeader.responsive else "" %}
+{% set textPosition = "left" if blockHeader.textPosition and blockHeader.textPosition == "left" else "right" %}
+
+{% block beforeColumn %}
+{% if blockHeader.text and textPosition == "left" %}
+{% call function.column(columnType) %}
+{% renderMarkDown mobileSpacer  %}
+{% call function.table({
+class: "header-contact-info  d-left m-center",
+width: "auto",
+spacer: {
+size: blockHeader.spacer.size,
+hideOnMobile: spacerResponsive
+}
+}) %}
+{% call function.row(true) %}
+{% call function.column(true) %}
+{{ module.image({
+  image: {
+    url: blockHeader.icon.url,
+    width: blockHeader.icon.width,
+    height: blockHeader.icon.height,
+    alt: blockHeader.icon.alt
+  }
+}) }}
+{% endcall %}
+{{ function.gutter(blockHeader.icon.gutter) }}
+{% call function.column(true) %}
+
+{{ blockHeader.text }}
+
+{% endcall %}         
+{% endcall %}    
+{% endcall %}
+{% endcall %}
+{% endif %}
+{% endblock %}
+
+{% block afterColumn %}
+{% if blockHeader.text and textPosition == "right" %}
+{% call function.column(columnType) %}
+{% call function.table({
+class: "header-contact-info  d-right m-center",
+width: "auto",
+spacer: {
+size: blockHeader.spacer.size,
+hideOnMobile: spacerResponsive
+}
+}) %}
+{% call function.row(true) %}
+{% call function.column(true) %}
+{{ module.image({
+  image: {
+    url: blockHeader.icon.url,
+    width: blockHeader.icon.width,
+    height: blockHeader.icon.height,
+    alt: blockHeader.icon.alt
+  }
+}) }}
+{% endcall %}
+{{ function.gutter(blockHeader.icon.gutter) }}
+{% call function.column(true) %}
+
+{{ blockHeader.text }}
+
+{% endcall %}         
+{% endcall %}    
+{% endcall %}
+{% renderMarkDown mobileSpacer  %}
+{% endcall %}
+{% endif %}
+{% endblock %}

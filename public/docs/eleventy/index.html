@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="telephone=no">
+  <style type="text/css" media="screen">
+    body {
+      background: #fff;
+      display: block;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+      padding-left: 0 !important;
+      padding-top: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: 0 !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      mso-cellspacing: 0px;
+      mso-padding-alt: 0px 0px 0px 0px;
+      -webkit-text-size-adjust: none
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic
+    }
+
+    table {
+      mso-cellspacing: 0px;
+      mso-padding-alt: 0px 0px 0px 0px
+    }
+
+    div.lm-show {
+      display: block
+    }
+
+    div.dm-show {
+      display: none
+    }
+
+    @media only screen and (max-device-width: 480px),
+    only screen and (max-width: 480px) {
+      table.mobile-shell {
+        min-width: 100% !important;
+        width: 100% !important
+      }
+
+      table.m-hide-bg {
+        background-image: none !important
+      }
+
+      table.m-center {
+        margin: 0 auto !important
+      }
+
+      table.m-left {
+        margin-left: auto !important
+      }
+
+      table.m-right {
+        margin-right: auto !important
+      }
+
+      table.m-hide {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important
+      }
+
+      td.td {
+        min-width: 100% !important;
+        width: 100% !important
+      }
+
+      td.m-hide-bg {
+        background-image: none !important
+      }
+
+      td.content-spacing-small {
+        width: 10px !important
+      }
+
+      td.content-spacing {
+        width: 20px !important
+      }
+
+      td.content-spacing-medium {
+        width: 30px !important
+      }
+
+      td.content-spacing-large {
+        width: 40px !important
+      }
+
+      td.m-hide {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important
+      }
+
+      td.m-fluid-img img {
+        min-width: 100% !important;
+        width: 100% !important;
+        height: auto !important
+      }
+
+      th.column {
+        display: block !important;
+        float: left !important;
+        min-width: 100% !important;
+        width: 100% !important
+      }
+
+      th.m-hide {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important
+      }
+
+      div.m-br-small {
+        height: 10px !important
+      }
+
+      div.m-br {
+        height: 20px !important
+      }
+
+      div.m-br-medium {
+        height: 30px !important
+      }
+
+      div.m-br-large {
+        height: 40px !important
+      }
+
+      div.m-br-2xlarge {
+        height: 50px !important
+      }
+
+      div.m-br-3xlarge {
+        height: 60px !important
+      }
+
+      div.m-hide {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important
+      }
+
+      .m-center {
+        text-align: center !important
+      }
+
+      .m-left {
+        text-align: left !important
+      }
+
+      .m-right {
+        text-align: right !important
+      }
+
+      div.m-fluid-img img {
+        min-width: 100% !important;
+        width: 100% !important;
+        height: auto !important
+      }
+
+      span.m-hide {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important
+      }
+
+      .m-display-block {
+        display: block
+      }
+
+      .m-display-inline {
+        display: inline-block
+      }
+    }
+
+    @media(prefers-color-scheme: dark) {
+      table.dm-hide-bg {
+        background: none !important
+      }
+
+      div.lm-show {
+        display: none !important
+      }
+
+      div.dm-show {
+        display: block !important
+      }
+    }
+  </style>
+</head>
+
+<body style="-webkit-text-size-adjust: none; background: #fff; display: block; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; min-width: 100% !important; mso-cellspacing: 0px; mso-padding-alt: 0px 0px 0px 0px; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important; width: 100% !important;">
+  <table border="0" class="container" cellspacing="0" cellpadding="0" width="100%" style="background-color: #efefef;">
+    <tbody>
+      <tr>
+        <td align="center" valign="top" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+          <table border="0" class="mobile-shell" cellspacing="0" cellpadding="0" width="600" style="background-color: #fff; min-width: 600px; width: 600px;">
+            <tbody>
+              <tr>
+                <td class="td" style="background-color: #fff; font-size: 0 !important; font-weight: normal; line-height: 0 !important; min-width: 600px; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important; width: 600px;">
+                  <table bgcolor="royalblue" border="0" class="header" cellspacing="0" cellpadding="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td class="content-spacing" width="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="40" height="10" alt="">
+                        </td>
+                        <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="header-text">
+                            <h1 class="h1 m-center" style="color: #fff; font-family: Arial,Helvetica,sans-serif; font-size: 38px; line-height: 44px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">11ty emails V2</h1>
+                          </div>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td class="content-spacing" width="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="40" height="10" alt="">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table border="0" class="body" cellspacing="0" cellpadding="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td class="content-spacing-medium" width="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="40" height="10" alt="">
+                        </td>
+                        <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="40" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><a href="/" class="small">Inicio</a></p>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h2 class="h2" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 28px; line-height: 34px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Filtros</h2>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="40" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3 class="h3 titles" style="color: #4169e1; font-family: Arial,Helvetica,sans-serif; font-size: 24px; line-height: 30px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>roman</strong></h3>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h4 class="h4" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; line-height: 24px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Parametros</strong> <em>Object</em></h4>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="10" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <ul class="ul-list" style="list-style: disc; padding-bottom: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important;">
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">Da formato al índice para que se muestre el número cardinal como número romano</li>
+                          </ul>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{{ 6 | <em><strong>roman</strong></em> }}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><em style="color: #80003e;">vi</em></p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="80" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="80" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3 class="h3 titles" style="color: #4169e1; font-family: Arial,Helvetica,sans-serif; font-size: 24px; line-height: 30px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>letter</strong></h3>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h4 class="h4" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; line-height: 24px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Parametros</strong> <em>Object</em></h4>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="10" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <ul class="ul-list" style="list-style: disc; padding-bottom: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important;">
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">Da formato al índice para que se muestre el número cardinal como letra, la que corresponda al alfabeto. Por ejemplo <em>1</em> = <em>a</em></li>
+                          </ul>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{{ 6 | <em><strong>letter</strong></em> }}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><em style="color: #80003e;">f</em></p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="80" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="80" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3 class="h3 titles" style="color: #4169e1; font-family: Arial,Helvetica,sans-serif; font-size: 24px; line-height: 30px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>typeOf</strong></h3>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h4 class="h4" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; line-height: 24px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Parametros</strong> <em>Object</em></h4>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="10" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <ul class="ul-list" style="list-style: disc; padding-bottom: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important;">
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">Obtiene el tipo de variable a evaluar, <em class="vars" style="color: #1e90ff !important;">string</em>, <em class="vars" style="color: #1e90ff !important;">number</em>, <em class="vars" style="color: #1e90ff !important;">object</em> o <em class="vars" style="color: #1e90ff !important;">array</em></li>
+                          </ul>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{{ “Seis” | <em><strong>typeOf</strong></em> }}</p>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{{ 6 | <strong>t<em>ypeOf</em></strong> }}</p>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{{ { var : “value” } | <em><strong>typeOf</strong></em> }}</p>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{{ [ 1, 2, 3 ] | <em><strong>typeOf</strong></em> }}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><em style="color: #80003e;">string</em></p>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><em style="color: #80003e;">number</em></p>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><em style="color: #80003e;">object</em></p>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><em style="color: #80003e;">array</em></p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="80" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="80" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h2 class="h2" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 28px; line-height: 34px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Shortcodes</h2>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="40" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3 class="h3 titles" style="color: #4169e1; font-family: Arial,Helvetica,sans-serif; font-size: 24px; line-height: 30px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>renderMarkDown</strong></h3>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h4 class="h4" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; line-height: 24px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Parametros</strong> <em>Object</em></h4>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="10" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <ul class="ul-list" style="list-style: disc; padding-bottom: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important;">
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;"><strong>content</strong>: <em class="vars" style="color: #1e90ff !important;">String</em> texto en formato Markdown o HTML</li>
+                          </ul>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{% <em style="color: #80003e;"><strong>renderMarkDown</strong></em> "# Título H1<br>
+&lt;hr &gt;</p>
+<p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Párrafo" %}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">&lt;h1&gt;Título&lt;/h1&gt;<br>
+                                      &lt;hr &gt;<br>
+                                      &lt;p&gt;Párrafo&lt;/p&gt;</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="80" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="80" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3 class="h3 titles" style="color: #4169e1; font-family: Arial,Helvetica,sans-serif; font-size: 24px; line-height: 30px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>renderMarkDownFile</strong></h3>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h4 class="h4" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; line-height: 24px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Parametros</strong> <em>Object</em></h4>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="10" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <ul class="ul-list" style="list-style: disc; padding-bottom: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important;">
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;"><strong>file</strong>: <em class="vars" style="color: #1e90ff !important;">String</em> ruta del archivo <em>.md</em> dentro de <em>src/_content/</em></li>
+                          </ul>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{% <em style="color: #80003e;"><strong>renderMarkDownFile</strong></em> “docs/foo/foo.md” %}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">&lt;h1&gt;Título&lt;/h1&gt;<br>
+                                      &lt;hr &gt;<br>
+                                      &lt;p&gt;Párrafo&lt;/p&gt;</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="80" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="80" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h3 class="h3 titles" style="color: #4169e1; font-family: Arial,Helvetica,sans-serif; font-size: 24px; line-height: 30px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>image</strong></h3>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <h4 class="h4" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 18px; line-height: 24px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Parametros</strong> <em>Object</em></h4>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="10" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <ul class="ul-list" style="list-style: disc; padding-bottom: 0 !important; padding-left: 20px !important; padding-right: 0 !important; padding-top: 0 !important;">
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">
+                              <p style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>file</strong>: <em class="vars" style="color: #1e90ff !important;">String</em> ruta del archivo dentro de <em>src/</em>, si la ruta del archivo comimenza con <em>http</em> o <em>htpps</em> se omite la optimización. <strong>NOTA</strong>: cuando se usa el comando <em>npm run build</em> cambia la ruta del archivo usando el valor de <em>domain</em> mas el nombre del archivo por loque se recomienda subir los archivos optimizados dentro de la carpeta <strong>public/images</strong> a la ruta definida en <em>domain</em></p>
+                            </li>
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">
+                              <p style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>format</strong>: <em class="vars" style="color: #1e90ff !important;">String</em> formato de salida de la imagen a optimizar, acepta <em><strong>jpeg</strong></em>, <em><strong>png</strong></em> y <em><strong>webp</strong></em> aunque esta última no se recomienda para emails</p>
+                            </li>
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">
+                              <p style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>quality</strong>: <em class="vars" style="color: #1e90ff !important;">Number</em> calidad de la optimización</p>
+                            </li>
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">
+                              <p style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>width</strong>: <em class="vars" style="color: #1e90ff !important;">Number</em> ancho de la imagen a utilizar, si el valor no es un número por defecto se optimiza la imagen a 700px de ancho</p>
+                            </li>
+                            <li style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px;">
+                              <p style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>domain</strong>: <em class="vars" style="color: #1e90ff !important;">String</em> ruta de la carpeta donde se colocarna las imagenes optimizadas, si no se utiliza el comando <em>npm run build</em> esta ruta será relativa al proyecto tomando como carpeta de alojamiento <em>/images</em></p>
+                              <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                <tbody>
+                                  <tr>
+                                    <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                      <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </li>
+                          </ul>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{% <em style="color: #80003e;"><strong>image</strong></em> “images/image.svg”, {<br>
+&nbsp;&nbsp;<em style="color: #80003e;">format</em>: “jpeg”,<br>
+&nbsp;&nbsp;<em style="color: #80003e;">quality</em>: 50,<br>
+&nbsp;&nbsp;<em style="color: #80003e;">width</em>: 180,<br>
+&nbsp;&nbsp;<em style="color: #80003e;">domain</em>: “<a href="http://domain.com/folder">http://domain.com/folder</a>”<br>
+} %}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Usando <em style="color: #80003e;">npm run watch</em></strong><br>
+                                      /images/image_180w.jpg<br>
+                                      <strong>Usando <em style="color: #80003e;">npm run build</em></strong><br>
+                                      <a href="http://domain.com/folder/image_180w.jpg">http://domain.com/folder/image_180w.jpg</a>
+                                    </p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="30" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="30" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">Nunjucks</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">{% <em style="color: #80003e;"><strong>image</strong></em> “<a href="https://images/image.jpg">https://images/image.jpg</a>”, {<br>
+&nbsp;&nbsp;<em style="color: #80003e;">format</em>: “png”,<br>
+&nbsp;&nbsp;<em style="color: #80003e;">quality</em>: 50,<br>
+&nbsp;&nbsp;<em style="color: #80003e;">width</em>: 180,<br>
+&nbsp;&nbsp;<em style="color: #80003e;">domain</em>: “<a href="http://domain.com/folder">http://domain.com/folder</a>”<br>
+} %}</p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table bgcolor="#f5f5f5" border="0" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                                <td style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="code">
+                                    <h5 class="h5" style="color: #000; font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 22px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">HTML</h5>
+                                    <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                      <tbody>
+                                        <tr>
+                                          <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                            <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p style="color: #000; font-family: Consolas,monaco,monospace; font-size: 12px; line-height: 20px; margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; margin-top: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;"><strong>Usando <em style="color: #80003e;">npm run watch</em> o <em style="color: #80003e;">npm run build</em></strong><br>
+                                      <a href="https://images/image.jpg">https://images/image.jpg</a>
+                                    </p>
+                                  </div>
+                                  <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                                    <tbody>
+                                      <tr>
+                                        <td height="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="20" alt="">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td class="content-spacing" width="20" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="20" height="10" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table border="0" class="spacer" cellspacing="0" cellpadding="0" width="100%" style="min-width: 100% !important; width: 100% !important;">
+                            <tbody>
+                              <tr>
+                                <td height="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                                  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="40" alt="">
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td class="content-spacing-medium" width="40" style="font-size: 0 !important; font-weight: normal; line-height: 0 !important; padding-bottom: 0 !important; padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important;">
+                          <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="40" height="10" alt="">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

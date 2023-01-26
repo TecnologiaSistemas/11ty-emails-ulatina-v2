@@ -1,0 +1,60 @@
+{%- macro addItems(attributes, spacer) %}
+{% set spacerTop = spacer.top.size if spacer.top.size else spacer.size %}
+{% set spacerBottom = spacer.bottom.size if spacer.bottom.size else spacer.size %}
+{% set spacerTopHideOnMobile = spacer.top.hideOnMobile if spacer.top.hideOnMobile else spacer.hideOnMobile %}
+{% set spacerBottomHideOnMobile = spacer.bottom.hideOnMobile if spacer.bottom.hideOnMobile else spacer.hideOnMobile %}
+{% call function.column(attributes) %}
+{{ module.spacer(spacerTop, spacerTopHideOnMobile) }}
+
+{{ caller() }}
+
+{{ module.spacer(spacerBottom, spacerBottompHideOnMobile) }}
+{% endcall %}
+{% endmacro -%}
+
+{% if blockFeatures.type == "list" %}
+{% set blockList = blockFeatures %}
+{% include "components/list.njk" %}
+
+{% else %}
+{% set blockContent = {
+  table: blockFeatures.table,
+  gutters: blockFeatures.gutters,
+  spacer: blockFeatures.spacer,
+  responsive: false,
+  items: blockFeatures.items
+} %}
+{% set gutterInner = blockContent.gutters.inner if blockContent.gutters.inner else blockContent.gutters %}
+
+{% extends "components/basic_content.njk" %}
+
+{% block topRow %}
+{{ function.gutter(gutterLeft) }}
+{% for i in blockContent.items.content %}
+{% call addItems(blockContent.items.attributes.index, blockContent.items.spacer ) %}
+
+{% if blockContent.items.type == "image" %}
+{{ module.image(i) }}
+{% endif %}
+
+{% endcall %}
+{% if not loop.last %}
+{{ function.gutter(gutterInner) }}
+{% endif %}
+{% endfor %}
+{{ function.gutter(gutterRight) }}
+{% endblock %}
+
+{% block contentColumn %}
+{% for i in blockContent.items.content %}
+{% call addItems(blockContent.items.attributes.content, blockContent.items.spacer ) %}
+
+{{ i.text }}
+
+{% endcall %}
+{% if not loop.last %}
+{{ function.gutter(gutterInner) }}
+{% endif %}
+{% endfor %}
+{% endblock %}
+{% endif %}

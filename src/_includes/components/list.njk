@@ -1,0 +1,97 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{% macro addListContainer(type, class) %}
+{%- if type == "number" or type == "letter" or type == "roman" or type == "image" -%}
+{% call function.table({
+  class: class
+}) %}
+{{ caller() }}
+{% endcall %}
+{%- else -%}
+<ul {{ function.setAttr("class", class, "") | trim }}>
+{{ caller() }}
+</ul>
+{%- endif -%}
+{% endmacro%}
+
+{%- macro addListItem(options) %}
+{%- set class = options.attrs.class if options.attrs.class else "li" -%}
+{%- set spacerTop = options.spacer.top.size if options.spacer.top.size else options.spacer.size -%}
+{%- set spacerBottom = options.spacer.bottom.size if options.spacer.bottom.size else options.spacer.size -%}
+{%- set spacerTopHideOnMobile = options.spacer.top.hideOnMobile if options.spacer.top.hideOnMobile else options.spacer.hideOnMobile -%}
+{%- set spacerBottomHideOnMobile = options.spacer.bottom.hideOnMobile if options.spacer.bottom.hideOnMobile else options.spacer.hideOnMobile -%}
+{%- if options.type == "number" or options.type == "letter" or options.type == "roman" or options.type == "image" -%}
+{% call function.row(true) %}
+{% call function.column({
+align: options.attrs.index.align,
+class: options.attrs.index.class,
+valign: options.attrs.index.valign,
+width: options.attrs.index.width
+}) %}
+{{ module.spacer(spacerTop, spacerTopHideOnMobile) }}
+{% call function.setContent(class + "-index") %}
+{%- if options.type == "letter" -%}
+{{ options.attrs.index.prepend }}{{ options.index | letter }}{{ options.attrs.index.append }}
+{%- elif options.type == "roman" -%}
+{{ options.attrs.index.prepend }}{{ options.index | roman }}{{ options.attrs.index.append }}
+{%- elif options.type == "image" -%}
+<img src="{% image options.image.url, { format: options.image.format, quality: options.image.quality, width: options.image.width, domain: options.image.domain } %} " width="{{ options.image.width | default('100%') }}" {% if options.image.height -%}height="{{ options.image.height }}"{%- endif %} alt="{{ options.image.alt | default('') }}">
+{%- else -%}
+{{ options.attrs.index.prepend }}{{ options.index }}{{ options.attrs.index.append }}
+{%- endif -%}
+{% endcall %}
+{{ module.spacer(spacerBottom, spacerBottomHideOnMobile) }}
+{% endcall %}
+{{ function.gutter(options.gutter) }}
+{% call function.column({
+align: options.attrs.content.align,
+class: options.attrs.content.class,
+valign: options.attrs.content.valign
+}) %}
+{{ module.spacer(spacerTop, spacerTopHideOnMobile) }}
+{% call function.setContent(class + "-content") %}
+{{ caller() }}
+{% endcall %}
+{{ module.spacer(spacerBottom, spacerBottomHideOnMobile) }}
+{% endcall %}
+{% endcall %}
+{%- else -%}
+{%- if options.type == "md" -%}
+<li {{ function.setAttr("class", class + "-md", "") | trim }}>
+{% renderMarkDownFile options.file %}
+</li>
+{%- else -%}
+<li {{ function.setAttr("class", class, "") | trim }}>
+{{ caller() }}
+</li>
+{%- endif -%}
+{%- endif -%}
+{% endmacro -%}
+{% set blockContent = blockList %}
+{% set gutterInner = blockList.gutters.inner if blockList.gutters.inner else blockList.gutters %}
+
+{% extends "components/basic_content.njk" %}
+
+{% block column %}
+{% if blockList.items %}
+{% set containerClass = blockList.items.attributes.class if blockList.items.type == "number" or blockList.items.type == "letter" or blockList.items.type == "roman" or blockList.items.type == "image"  else blockList.class %}
+{% call addListContainer(blockList.items.type, containerClass)  %}
+{% for l in blockList.items.content %}
+{% call addListItem({
+type: blockList.items.type,
+spacer: blockList.items.spacer,
+gutter: gutterInner,
+attrs: blockList.items.attributes,
+index: loop.index,
+file: l.file,
+image: l.image 
+}) %}
+
+{{ l.text }}
+
+{% endcall %}
+{% endfor %}
+{% endcall %}
+{% endif %}
+{% endblock %}

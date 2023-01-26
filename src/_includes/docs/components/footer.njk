@@ -1,0 +1,42 @@
+{% set blockFooter = {
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: { width: 30 },
+  spacer: { size: 30 }
+} %}
+
+{% extends "components/footer.njk" %}
+
+{% block topRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column(true) %}
+{{ module.spacer(10) }}
+
+**Block topRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}
+
+{% block column %}
+**block column** {.text .white .d-center}
+{% endblock %}
+
+{% block bottomRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column(true) %}
+{{ module.spacer(10) }}
+
+**Block bottomRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}

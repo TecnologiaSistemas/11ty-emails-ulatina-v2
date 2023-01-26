@@ -1,0 +1,30 @@
+{% set blockHero = {
+  table: {
+    class: "generic-hero",
+    bgcolor: "red"
+  },
+  spacer: { inner: { size: 40 }, size: 40 },
+  textTable: {
+    table: true,
+    gutters: { width: 40 }
+  },
+  text: "**Variable text** {.h3 .white .d-center}",
+  image: {
+    url: "/images/vintage-radio.jpg",
+    width: "100%",
+    domain: main.imagesUrlProduction
+  },
+  cta: {
+    table: {
+      class: "border-rounded",
+      align: "center",
+      bgcolor: "black"
+    },
+    gutters: { width: 60},
+    spacer: { size: 10 },
+    text: "**Call 2 action**{.h4 .white}",
+    link: "#"
+  }
+} %}
+
+{% include "modules/hero.njk" %}

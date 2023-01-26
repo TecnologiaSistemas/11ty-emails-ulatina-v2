@@ -1,0 +1,27 @@
+{% macro contactInfo(options, columnType) %}
+{% call function.table(true) %}
+{% call function.row(true) %}
+{% for c in options %}
+{% call function.column(columnType) %}
+{% call module.imageContent({
+  table: {
+    align: c.align,
+    class: c.class,
+    width: "auto"
+  },
+  image: c.icon,
+  gutters: { inner: c.gutter },
+  spacer: c.spacer
+}) %}
+
+{{ c.text }}
+
+{% endcall %}
+{% endcall %}
+{% endfor %}
+{% endcall %}
+{% endcall %}
+{% endmacro %}
+{% set blockContent = blockFooter %}
+
+{% extends "components/basic_content.njk" %}

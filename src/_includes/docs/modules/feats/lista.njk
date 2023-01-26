@@ -1,0 +1,42 @@
+{% set blockFeatures = {
+  type: "list",
+  table: {
+    class: "generic-header",
+    bgcolor: "red"
+  },
+  gutters: { inner: { width: 10 } },
+  responsive: true,
+  items: {
+    type: "image",
+    attributes: {
+      index: {
+        valign: "top"
+      },
+      content: {
+        valign: "top"
+      }
+    },
+    spacer: { bottom: { size: 20 } },
+    content: [
+      {
+        image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 40,
+          height: 40
+        },
+        text: "**Lorem ipsum dolor sit amet**
+consectetur adipiscing elit. Quisque eget lorem posuere, mollis lacus non, tempus nibh. {.white}"
+      },
+      {
+        image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 40,
+          height: 40
+        },
+        text: "**Lorem ipsum dolor sit amet**
+consectetur adipiscing elit. Quisque eget lorem posuere, mollis lacus non, tempus nibh. {.white}"
+      }
+    ]
+  }
+} %}
+{% include "modules/features.njk" %}

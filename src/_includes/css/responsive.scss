@@ -1,0 +1,103 @@
+/************************************
+* IMPORT CONFIG SCSS
+*************************************/
+@import "config";
+
+/************************************
+* GENERAL CSS
+*************************************/
+body {
+	background: $body-background-color;
+	display: block;
+	@include reset();
+	@include fullWidth();
+	@include mso();
+  -webkit-text-size-adjust: none;
+}
+img {
+	-ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */
+}
+table {
+	@include mso();
+}
+
+/************************************
+* DARK MODE
+*************************************/
+div.lm-show { display: block; }
+div.dm-show { display: none; }
+
+/************************************
+* MEDIA QUERIES
+*************************************/
+@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+	table.mobile-shell {
+		@include fullWidth();
+	}
+	table.m-hide-bg { background-image: none !important; }
+	table.m-center { margin: 0 auto !important; }
+	table.m-left { margin-left: auto !important; }
+	table.m-right { margin-right: auto !important; }
+	table.m-hide {
+		@include hideElement();
+	}
+
+	td.td {
+		@include fullWidth();
+	}
+	td.m-hide-bg {
+		background-image: none !important;
+	}
+	td.content-spacing-small { width: setspacer(0.5, $spacerUnit) !important; }
+	td.content-spacing { width: setspacer(1, $spacerUnit) !important; }
+	td.content-spacing-medium { width: setspacer(1.5, $spacerUnit) !important; }
+	td.content-spacing-large { width: setspacer(2, $spacerUnit) !important; }
+	td.m-hide {
+		@include hideElement();
+	}
+	td.m-fluid-img img {
+		@include fullWidth();
+		height: auto !important;
+	}
+	th.column {
+		display: block !important;
+		float: left !important;
+		@include fullWidth();
+	}
+	th.m-hide {
+		@include hideElement();
+	}
+
+	div.m-br-small { height: setspacer(0.5, $spacerUnit) !important; }
+	div.m-br { height: setspacer(1, $spacerUnit) !important; }
+	div.m-br-medium { height: setspacer(1.5, $spacerUnit) !important; }
+	div.m-br-large { height: setspacer(2, $spacerUnit) !important; }
+	div.m-br-2xlarge { height: setspacer(2.5, $spacerUnit) !important; }
+	div.m-br-3xlarge { height: setspacer(3, $spacerUnit) !important; }
+	div.m-hide {
+		@include hideElement();
+	}
+	.m-center { text-align: center !important; }
+	.m-left { text-align: left !important; }
+	.m-right { text-align: right !important; }
+	div.m-fluid-img img {
+		@include fullWidth();
+		height: auto !important;
+	}
+
+	span.m-hide {
+		@include hideElement();
+	}
+
+	.m-display-block { display: block; }
+	.m-display-inline { display: inline-block; }
+}
+
+/************************************
+* DARK MODE MEDIA QUERIES
+*************************************/
+@media (prefers-color-scheme: dark ) {
+	table.dm-hide-bg { background: none !important; }
+	div.lm-show { display: none !important; }
+	div.dm-show { display: block !important; }
+}

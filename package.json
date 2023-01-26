@@ -1,0 +1,32 @@
+{
+  "name": "ap_emails_template",
+  "version": "1.0.1",
+  "description": "AP Emails Template Installation",
+  "main": "index.js",
+  "author": {
+    "name": "AP LAtam",
+    "email": "creativo@aplatam.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TecnologiaSistemas/11ty-emails.git"
+  },
+  "license": "ISC",
+  "scripts": {
+    "watch-log": "ELEVENTY_ENV=development npx eleventy --serve",
+    "watch": "ELEVENTY_ENV=development npx eleventy --serve --quiet",
+    "build": "ELEVENTY_ENV=production eleventy",
+    "debug": "ELEVENTY_ENV=development DEBUG=* npx eleventy",
+    "test": "ELEVENTY_ENV=development npx eleventy --dryrun"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-img": "^2.0.0",
+    "js-beautify": "^1.13.13",
+    "sass": "^1.32.12",
+    "inline-css": "^4.0.1",
+    "markdown-it": ">=10.0.0",
+    "markdown-it-attrs": ">=4.0.0",
+    "markdown-it-multimd-table": ">=4.1.0"
+  }
+}

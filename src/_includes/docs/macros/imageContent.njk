@@ -1,0 +1,34 @@
+{% import "components/modules.njk" as module %}
+
+{% call module.imageContent({
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: { width: 30 },
+  image: {
+    url: "images/vintage-radio.jpg",
+    width: 320,
+    alt: "Radio",
+    position: "right"
+  }
+}) %}
+**Texto en columna izquierda** {.white .d-center}
+{% endcall %}
+
+{{ module.spacer(40) }}
+
+{% call module.imageContent({
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: { width: 30 },
+  image: {
+    url: "images/vintage-radio.jpg",
+    width: 320,
+    alt: "Radio"
+  }
+}) %}
+**Texto en columna derecha** {.white .d-center}
+{% endcall %}

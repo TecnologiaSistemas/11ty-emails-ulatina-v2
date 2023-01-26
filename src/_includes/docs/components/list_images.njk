@@ -1,0 +1,77 @@
+{% import "src/_content/docs/lorem-vars.md" as items %}
+
+{% set blockList = {
+  class: "generic-list",
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: {
+    width: 30,
+    inner: {
+      width: 20
+    }
+  },
+  spacer: { size: 30 },
+  items: {
+    type: "image",
+    spacer: {
+      size: 10
+    },
+    attributes: {
+      class: "table-list",
+      index: {
+        align: "center",
+        valign: "top",
+        width: 15
+      }
+    },
+    content: [
+      { 
+        image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 60,
+          height: 60
+        },
+        text: items.item1
+      },
+      { image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 24,
+          height: 24
+        },
+        text: items.item2
+      }
+    ]
+  }
+} %}
+
+{% extends "components/list.njk" %}
+
+{% block topRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column(true) %}
+{{ module.spacer(10) }}
+
+**Block topRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}
+
+{% block bottomRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column(true) %}
+{{ module.spacer(10) }}
+
+**Block bottomRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}

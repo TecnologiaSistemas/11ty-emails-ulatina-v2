@@ -1,0 +1,57 @@
+{% set gutterWidth = { width: 10 } %}
+{% set spacerSize = { size: 10 } %}
+
+{% set blockFooter = {
+  table: {
+    class: "generic-footer",
+    bgcolor: "red"
+  },
+  gutters: { width: 30 },
+  spacer: {
+    size: 30,
+    inner: { size: 20 }
+  },
+  image: {
+    class: "d-center",
+    url: "https://online.anahuac.mx/file/anahuac/image/logo-anahuac-bw-header.png",
+    width: 180,
+    height: 51
+  },
+  text: "**¿Quieres obtener tu insignia? Comunícate con nosotros.** {.h5 .white .d-center}",
+  contactInfo: [
+    {
+      class: "generic-footer-inner d-left m-center",
+      icon: {
+        url: "https://online.anahuac.mx/file/anahuac/image/icon_mail_white.png",
+        width: 20,
+        height: 20
+      },
+      gutter: gutterWidth,
+      spacer: spacerSize,
+      text:  "[mail@uni.com](mailto:mail@uni.com){.white}"
+    },
+    {
+      class: "generic-footer-inner d-center",
+      spacer: spacerSize,
+      text:  "[55 22 1234 5678](tel:552212345678){.white}"
+    },
+    {
+      class: "generic-footer-inner d-right m-center",
+      icon: {
+        url: "https://online.anahuac.mx/File/Anahuac/image/icon_whatsapp-white.png",
+        width: 20,
+        height: 20
+      },
+      gutter: gutterWidth,
+      spacer: spacerSize,
+      text:  "[55 4433 2211](#){.white}"
+    }
+  ],
+  legal: {
+    class: "border-top",
+    text: "Copyright © 2022 Nombre de la Universidad{.legal .white .d-center}"
+  },
+  responsive: true
+} %}
+
+{% include "modules/footer.njk" %}

@@ -1,0 +1,50 @@
+{% extends "components/basic_content.njk" %}
+
+{% block column %}
+{% for e in blockContent.items %}
+{% set e = e | list %}
+{% if e[0].value.outerTable %}
+{% set addTable = {
+  class: e[0].value.outerTable.class,
+  table: true,
+  gutters: e[0].value.outerTable.gutters,
+  spacer: e[0].value.outerTable.spacer
+} %}
+{% else %}
+{% set addTable = "" %}
+{% endif %}
+{% if e[0].key == "spacer" %}
+{{ module.spacer(e[0].value ) }}
+{% elif e[0].key == "text" or e[0].key == "title" %}
+{% call module.generic(addTable) %}
+{{ e[0].value.content }}
+{% endcall %}
+{% elif e[0].key == "image" %}
+{% call module.generic(addTable) %}
+{{ module.image({ image: e[0].value }) }}
+{% endcall %}
+{% elif e[0].key == "cta" %}
+{% set blockCTA = {
+  table: {
+    align: e[0].value.table.align,
+    bgcolor: e[0].value.table.bgcolor,
+    class: e[0].value.table.class,
+    width: e[0].value.table.width | default("auto")
+  },
+  gutters: e[0].value.gutters,
+  spacer: e[0].value.spacer,
+  image: e[0].value.image,
+  responsive: e[0].value.responsive,
+  text: e[0].value.text,
+  link: e[0].value.link,
+  class: e[0].value.class
+} %}
+{% call module.generic(addTable) %}
+{% include "modules/cta.njk" %}
+{% endcall%}
+{% elif e[0].key == "table" %}
+{% set blockTable = e[0].value %}
+{% include "modules/table.njk" %}
+{% endif %}
+{% endfor %}
+{% endblock %}

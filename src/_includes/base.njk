@@ -1,0 +1,34 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="date=no" />
+	<meta name="format-detection" content="address=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="/css/styles.css">
+	<style type="text/css" media="screen">
+		{% sass "css/css-rules.scss" %}
+	</style>
+	
+</head>
+
+<body>
+{% call function.table({ class: "container" }) %}
+{% call function.row(true) %}
+{% call function.column({ align: "center", valign: "top" }) %}
+{% call function.table({ class: "mobile-shell", width: "600" }) %}
+{% call function.row(true) %}
+{% call function.column({ class: "td" }) %}
+{%- block content %}{% endblock -%}
+{% endcall %}
+{% endcall %}
+{% endcall %}
+{% endcall %}
+{% endcall %}
+{% endcall %}
+</body>	
+</html>

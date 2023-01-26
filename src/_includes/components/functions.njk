@@ -1,0 +1,80 @@
+{%- macro setAttr(attr, value, default) %}
+  {% set return = "" %}
+  {%- if value -%}
+  {% set return = attr + '="' + value +'"' %}
+  {%- else -%}
+  {%- if default -%}
+  {% set return = attr + '="' + default +'"' %}
+  {%- endif -%}
+  {%- endif -%}
+  {{ return | safe }}
+{% endmacro -%}
+
+{%- macro setValue(value, id = "") %}
+  {%- if value | typeOf == "object" and id -%}
+  {%- if value[id] -%}
+  {{ value[id] }}
+  {%- endif -%}
+  {%- else -%}
+  {{ value }}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro addLink(options) %}
+  {%- if options.link -%}
+  <a {{ setAttr("href", options.link, "") | trim }} {{ setAttr("class", options.class, "") | trim }}> {{ caller() }} </a>
+  {%- else -%}
+  {{ caller() }}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro table(options) %}
+  {%- if options -%}
+  <table {{ setAttr("align", options.align, "") | trim }} {{ setAttr("bgcolor", options.bgcolor, "") | trim }} border="0" {{ setAttr("class", options.class, "") | trim }} cellspacing="0" cellpadding="0" {{ setAttr("width", options.width, "100%") | trim }}><tbody>
+  {{ caller() }}
+  </tbody></table>
+  {%- else -%}
+  {{ caller() }}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro row(options) %}
+  {%- if options -%}
+  <tr {{ setAttr("class", options.class, "") | trim }}>
+  {{ caller() }}
+  </tr>
+  {%- else -%}
+  {{ caller() }}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro column(options) %}
+  {%- if options -%}
+  {%- set tag = "th" if options.tag == "th" else "td" -%}
+  <{{ tag }} {{ setAttr("align", options.align, "") | trim }} {{ setAttr("bgcolor", options.bgcolor, "") | trim }} {{ setAttr("class", options.class, "") | trim }} {{ setAttr("colspan", options.colspan, "") | trim }} {{ setAttr("height", options.height, "") | trim }} {{ setAttr("rowspan", options.rowspan, "") | trim }} {{ setAttr("valign", options.valign, "") | trim }} {{ setAttr("width", options.width, "") | trim }}>
+  {{ caller() }}
+  </{{ tag }}>
+  {%- else -%}
+  {{ caller() }}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro gutter(options) %}
+  {%- if options and options.width -%}
+  {% set addClass = options.class if options.class else "content-spacing" %}
+  {% set addClass = (["m-hide", addClass] | join(" ")) if options.hideOnMobile else addClass %}
+  {% call column({ class: addClass,  width: options.width }) %}
+  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="{{ options.width }}" height="10" alt="" />
+  {% endcall %}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro setContent(class) %}
+  {%- if class -%}
+  <div {{ setAttr("class", class, "") | trim }}>
+  {{ caller() }}
+  </div>
+  {%- else -%}
+  {{ caller() }}
+  {%- endif -%}
+{% endmacro -%}

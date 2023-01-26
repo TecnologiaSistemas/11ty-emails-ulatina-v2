@@ -1,0 +1,16 @@
+{% import "components/modules.njk" as module %}
+
+{{ module.image({
+  class: "generic-image",
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: {width: 30 },
+  spacer: { size: 30 },
+  image: {
+    url: "images/vintage-radio-wide.jpg",
+    width: "100%",
+    alt: "Radio"
+  }
+}) }}

@@ -1,0 +1,3 @@
+src/deprecated/**/*.md
+src/pending/**/*.md
+src/_content/**/*.md

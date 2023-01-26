@@ -1,0 +1,96 @@
+{% import "components/functions.njk" as function %}
+
+{%- macro spacer(size, hideOnMobile = false) %}
+  {%- if size -%}
+  {% set addClass = "m-hide" if hideOnMobile else "spacer" %}
+  {% call function.table({ class: addClass }) %}
+  <tr>
+  {% call function.column({ height: size }) %}
+  <img src="https://i.embluejet.com/ImagenesMoxie/33464/images/spacer.gif" width="100%" height="{{ size }}" alt="" />
+  {% endcall %}
+  </tr>
+  {% endcall %}
+  {%- endif -%}
+{% endmacro -%}
+
+{%- macro generic(options) %}
+  {%- set gutterLeft = options.gutters.left if options.table and options.gutters.left else ( options.gutters
+  if options.table and options.gutters.width) -%}
+  {%- set gutterRight = options.gutters.right if options.table and options.gutters.right else ( options.gutters
+  if options.table and options.gutters.width) -%}
+  {%- set spacerTop = options.spacer.top.size if options.spacer.top.size else options.spacer.size -%}
+  {%- set spacerBottom = options.spacer.bottom.size if options.spacer.bottom.size else options.spacer.size -%}
+  {%- set spacerTopHideOnMobile = options.spacer.top.hideOnMobile if options.spacer.top.hideOnMobile else options.spacer.hideOnMobile -%}
+  {%- set spacerBottomHideOnMobile = options.spacer.bottom.hideOnMobile if options.spacer.bottom.hideOnMobile else options.spacer.hideOnMobile -%}
+  {%- set addIt = true if options.table -%}
+  {% call function.table(options.table) %}
+  {% call function.row(addIt) %}
+  {{ function.gutter(gutterLeft) }}
+  {% call function.column(addIt)%}
+  {{ spacer(spacerTop, spacerTopHideOnMobile) }}
+  {% call function.setContent(options.class) %}
+  {{ caller() }}
+  {% endcall %}
+  {{ spacer(spacerBottom, spacerBottomHideOnMobile) }}
+  {% endcall %}
+  {{ function.gutter(gutterRight) }}
+  {% endcall %} 
+  {% endcall %}  
+{% endmacro -%}
+
+{%- macro image(options) %}
+  {% call generic(options) %}
+  {%- if options.image.url -%}
+  <img src="{% image options.image.url, { format: options.image.format, quality: options.image.quality, width: options.image.width, domain: options.image.domain } %} " width="{{ options.image.width | default('100%') }}" {% if options.image.height -%}height="{{ options.image.height }}"{%- endif %} alt="{{ options.image.alt | default('') }}">
+  {%- endif -%}
+  {% endcall %}
+{% endmacro -%}
+
+{%- macro imageContent(options) %}
+  {%- set addTable = options.table if options.table else true -%}
+  {%- set gutterLeft = options.gutters.left if options.gutters.left else options.gutters -%}
+  {%- set gutterRight = options.gutters.right if options.gutters.right else options.gutters -%}
+  {%- set gutterInner = options.gutters.inner if options.gutters.inner and options.image.url else (options.gutters if options.image.url) -%}
+  {%- set imagePos = options.image.class if options.image.class else ("m-right" if options.image.position == "right" else "m-left") -%}
+  {%- set spacerTop = options.spacer.top.size if options.spacer.top.size else options.spacer.size -%}
+  {%- set spacerBottom = options.spacer.bottom.size if options.spacer.bottom.size else options.spacer.size -%}
+  {%- set spacerTopHideOnMobile = options.spacer.top.hideOnMobile if options.spacer.top.hideOnMobile else options.spacer.hideOnMobile -%}
+  {%- set spacerBottomHideOnMobile = options.spacer.bottom.hideOnMobile if options.spacer.bottom.hideOnMobile else options.spacer.hideOnMobile -%}
+  {% call function.table(addTable) %}
+  {% call function.row(true) %}
+  {{ function.gutter(gutterLeft) }}
+  {%- if options.image.position == "right" -%}
+  <td width="{{ options.image.width | default(100) }}">
+  {{ spacer(spacerTop, spacerTopHideOnMobile) }}
+  {% call function.setContent(options.class) %}
+  {{ caller() }}
+  {% endcall %}
+  {{ spacer(spacerBottom, spacerBottomHideOnMobile) }}
+  </td>
+  {{ function.gutter(gutterInner) }}
+  {%- endif -%}
+  {%- if options.image and options.image.url -%}
+  <td width="{{ options.image.width | default(100) }}">
+  {{ spacer(spacerTop, spacerTopHideOnMobile) }}
+  <div {{ function.setAttr("class", imagePos, "m-left" ) }}>
+  <img src="{% image options.image.url, { format: options.image.format, quality: options.image.quality, width: options.image.width, domain: options.image.domain } %} " width="{{ options.image.width | default('100%') }}" {% if options.image.height -%}height="{{ options.image.height }}"{%- endif %} alt="{{ options.image.alt | default('') }}">
+  </div>
+  {{ spacer(spacerBottom, spacerBottomHideOnMobile) }}
+  </td>
+  {%- endif -%}
+  {%- if options.image.position != "right" -%}
+  {{ function.gutter(gutterInner) }}
+  <td>
+  {{ spacer(spacerTop, spacerTopHideOnMobile) }}
+  {% call function.setContent(options.class) %}
+
+  {{ caller() }}
+  
+  {% endcall %}
+  {{ spacer(spacerBottom, spacerBottomHideOnMobile) }}
+  </td>
+  {%- endif -%}
+  {{ function.gutter(gutterRight) }}
+  {% endcall %}
+  {% endcall %}
+{% endmacro -%}

@@ -1,0 +1,19 @@
+{% set blockHeader = {
+  table: {
+    class: "generic-header",
+    bgcolor: "red"
+  },
+  gutters: { width: 40 },
+  spacer: { size: 20 },
+  image: {
+    table: { class: "m-center" },
+    url: "https://online.anahuac.mx/file/anahuac/image/logo-anahuac-bw-header.png",
+    width: 180,
+    height: 51
+  },
+  text: "**11ty emails V2** {.h5 .white .d-right .m-center}",
+  responsive: true,
+  mobileSpacer: "m-br-medium"
+} %}
+
+{% include "modules/header/image-text.njk" %}

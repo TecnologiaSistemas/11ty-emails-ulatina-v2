@@ -1,0 +1,82 @@
+{% set blockTable = {
+  class: "generic-table",
+  bgcolor: "red",
+  rowsClass: "generic-row",
+  rows: [
+    [
+      { column: {
+          config: {
+            colspan: 7,
+            height: 20
+          }
+        }
+      }
+    ],
+    [
+      { gutter: { width: 30 } },
+      { image: {
+          content: {
+            url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+            width: 40,
+            height: 40
+          },
+          config: {
+            width: 40,
+            spacer: { top: { size: 5 } }
+          }
+        }
+      },
+      { gutter: { width: 10 } },
+      { text: {
+          content: "**Texto en columna** {.text .white}"
+        }
+      },
+      { gutter: { width: 30 } },
+      { cta: {
+        config: {
+          align: "center",
+          spacer: { size: 10 }
+        },
+        content: {
+          table: {
+            class: "border-rounded",
+            bgcolor: "black",
+            width: "auto"
+          },
+          gutters: { width: 20, inner: { width: 10 } },
+          spacer: { size: 10 },
+          image: {
+            url: "https://online.anahuac.mx/File/Anahuac/image/icon_whatsapp-white.png",
+            width: 30,
+            height: 30,
+            position: "left",
+            spacer: { size: 20 }
+          },
+          text: "**Call 2 action**{.h4 .white}",
+          link: "#"
+        }
+      } },
+      { gutter: { width: 30 } }
+    ],
+    [
+      { text: {
+          config: {
+            colspan: 7
+          },
+          content: '____{noshade size="1" width="100%" style="border-top:1px solid white;"}'
+        }
+      }
+    ],
+    [
+      { column: {
+          config: {
+            colspan: 7,
+            height: 20
+          }
+        }
+      }
+    ]
+  ]
+} %}
+
+{% include "modules/table.njk" %}

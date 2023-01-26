@@ -1,0 +1,60 @@
+{% import "src/_content/docs/lorem-vars.md" as items %}
+
+{% set blockList = {
+  class: "ul-list",
+  table: {
+    class: "list-aol",
+    bgcolor: "#000000"
+  },
+  gutters: {
+    width: 30,
+    inner: {
+      width: 10
+    }
+  },
+  spacer: { size: 30 },
+  items: {
+    spacer: {
+      size: 10
+    },
+    attributes: {
+      class: "li-list",
+      index: {
+        valign: "top",
+        align: "center",
+        width: 40
+      }
+    },
+    content: [
+      {
+        file: "docs/lorem.md",
+        image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 60,
+          height: 60
+        },
+        text: items.item1
+      },
+      {
+        file: "docs/lorem.md",
+        image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 24,
+          height: 24
+        },
+        text: items.item2
+      },
+      {
+        file: "docs/lorem.md",
+        image: {
+          url: "https://online.anahuac.mx/file/anahuac/image/icon_m_whatsapp-orange.png",
+          width: 24,
+          height: 24
+        },
+        text: items.item3
+      }
+    ]
+  }
+} %}
+
+{% include "components/list.njk" %}

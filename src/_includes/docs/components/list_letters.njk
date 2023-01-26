@@ -1,0 +1,63 @@
+{% import "src/_content/docs/lorem-vars.md" as items %}
+
+{% set blockList = {
+  class: "generic-list",
+  table: {
+    class: "generic-table",
+    bgcolor: "red"
+  },
+  gutters: {
+    width: 30,
+    inner: {
+      width: 20
+    }
+  },
+  spacer: { size: 30 },
+  items: {
+    type: "letter",
+    spacer: {
+      size: 10
+    },
+    attributes: {
+      class: "table-list",
+      index: {
+        valign: "top",
+        width: 15
+      }
+    },
+    content: [
+      { text: items.item1 },
+      { text: items.item2 }
+    ]
+  }
+} %}
+
+{% extends "components/list.njk" %}
+
+{% block topRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column(true) %}
+{{ module.spacer(10) }}
+
+**Block topRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}
+
+{% block bottomRow %}
+{% call function.row(true) %}
+{{ function.gutter(gutterLeft) }}
+{% call function.column(true) %}
+{{ module.spacer(10) }}
+
+**Block bottomRow** {.text .white .d-center}
+
+{{ module.spacer(10) }}
+{% endcall %}
+{{ function.gutter(gutterRight) }}
+{% endcall %}
+{% endblock %}

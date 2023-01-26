@@ -1,0 +1,20 @@
+{% set blockCTA = {
+  table: {
+    class: "border-rounded",
+    bgcolor: "black",
+    width: "auto"
+  },
+  gutters: { width: 40, inner: { width: 10 } },
+  spacer: { size: 15 },
+  image: {
+    url: "https://online.anahuac.mx/File/Anahuac/image/icon_whatsapp-white.png",
+    width: 30,
+    height: 30,
+    position: "left",
+    spacer: { size: 20 }
+  },
+  text: "**Call 2 action**{.h4 .white}",
+  link: "#"
+} %}
+
+{% include "modules/cta.njk" %}

@@ -1,0 +1,13 @@
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{% call module.imageContent(blockCTA) %}
+{% call function.addLink({
+  class: blockCTA.class,
+  link: blockCTA.link
+}) %}
+
+{{ blockCTA.text }}
+
+{% endcall %}
+{% endcall %}

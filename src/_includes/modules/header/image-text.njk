@@ -1,0 +1,43 @@
+{% extends "components/header.njk" %}
+
+{% set spacerResponsive = true if blockHeader.responsive else false %}
+{% set mobileSpacer = "<div class='"+ blockHeader.mobileSpacer +"'></div>" if blockHeader.responsive else "" %}
+{% set textPosition = "left" if blockHeader.textPosition and blockHeader.textPosition == "left" else "right" %}
+
+{% block beforeColumn %}
+{% if blockHeader.text and textPosition == "left" %}
+{% call function.column(columnType) %}
+{% renderMarkDown mobileSpacer  %}
+{% call module.generic({
+class: "header-text",
+spacer: {
+size: blockHeader.spacer.size,
+hideOnMobile: spacerResponsive
+}
+}) %}
+
+{{ blockHeader.text }}
+
+{% endcall %}
+{% endcall %}
+{% endif %}
+{% endblock %}
+
+{% block afterColumn %}
+{% if blockHeader.text and textPosition == "right" %}
+{% call function.column(columnType) %}
+{% call module.generic({
+class: "header-text",
+spacer: {
+size: blockHeader.spacer.size,
+hideOnMobile: spacerResponsive
+}
+}) %}
+
+{{ blockHeader.text }}
+
+{% endcall %}
+{% renderMarkDown mobileSpacer  %}
+{% endcall %}
+{% endif %}
+{% endblock %}
