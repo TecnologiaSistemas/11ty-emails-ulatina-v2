@@ -1,5 +1,5 @@
 {
-  "name": "ap_emails_template",
+  "name": "ulatina_emails",
   "version": "1.0.1",
   "description": "AP Emails Template Installation",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TecnologiaSistemas/11ty-emails.git"
+    "url": "git+https://github.com/TecnologiaSistemas/11ty-emails-ulatina-v2.git"
   },
   "license": "ISC",
   "scripts": {
