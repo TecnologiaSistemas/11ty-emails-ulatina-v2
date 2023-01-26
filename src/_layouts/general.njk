@@ -1,0 +1,104 @@
+{% extends "base.njk" %}
+
+{% import "components/functions.njk" as function %}
+{% import "components/modules.njk" as module %}
+
+{%- block content %}
+
+
+{% set blockHeader = {
+  table: {
+    class: "header",
+    bgcolor: "#2E2E2E"
+  },
+  gutters: { width: 40 },
+  spacer: { size: 20 },
+  image: {
+      table: { class: "d-left m-center" },
+      url: "http://online.ulatina.cr/file/img/logo_ulatina_white.png",
+      width: 118
+    },
+  icon: {
+      url: "http://online.ulatina.cr/file/img/icon_email_white.png",
+      width: 18,
+      height: 18,
+      gutter: { width: 10 }
+    },
+    text: "[5064 0006 958](tel:+5117071329){.font-14px .c-white .link-header target='_blank'}",
+    responsive: true,
+    mobileSpacer: "m-br-medium"
+} %}
+{% include "modules/header/image-icon-text.njk" %}
+
+{{ content | safe }}
+
+
+{% set blockFooter = {
+  table: {
+    bgcolor: "#2E2E2E"
+  },
+  gutters: { width: 30 },
+  spacer: {
+    size: 30,
+    inner: { size: 10 }
+   },
+   image: {
+    class: "d-center",
+    url: "http://online.ulatina.cr/file/img/logo_ulatina_white.png",
+    width: 118
+  },
+  text: "",
+  contactInfo: [
+    [
+      {
+        class: "d-center m-center",
+        icon: {
+          url: "http://online.ulatina.cr/file/img/icon_email_white.png",
+          width: 20,
+          height: 20
+        },
+        gutter: { width: 10 },
+        spacer: { size: 10 },
+        text:  "[admisiones@onlineulatina.com](mailto:admisiones@onlineulatina.com){.font-14px .c-white .link-header}"
+      }
+    ],
+    [
+      {
+        class: "full",
+        spacer: { top: { size: 15 } },
+        text: "____{.border-top-white}"
+      }
+    ],
+    [
+      {
+        class: "d-center m-center",
+        
+        icon: {
+          url: "http://online.ulatina.cr/file/img/icon_phone_white.png",
+          width: 20,
+          height: 20
+        },
+        gutter: { width: 10 },
+        spacer: { size: 10 },
+        text:  "[5064 0006 958](tel:+56232101196){.font-14px .c-white .link-header}"
+      },
+    
+      {
+        class: "d-center m-center",
+        icon: {
+          url: "http://online.ulatina.cr/file/img/icon_wa_white.png",
+          width: 20,
+          height: 20
+        },
+        gutter: { width: 10 },
+        spacer: { size: 10 },
+        text:  "[5064 0006 958](mailto:Info@usmponline.pe){.font-14px .c-white .link-header}"
+      }
+    ]
+  ],
+  responsive: true
+} %}
+
+{% include "modules/footer.njk" %}
+
+{% endblock -%}
